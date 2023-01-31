@@ -3,10 +3,10 @@
 $config = [];
 $config['db'] = [
     'host' => 'localhost',
-    'name' => 'PHP_Bank',
+    'name' => 'projetbank',
     'user' => 'root',
     'pass' => 'root',
-    'port' => 8888
+    'port' => 3306
 ];
 
 $config['roles'] = [
