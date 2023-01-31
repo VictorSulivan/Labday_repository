@@ -1,11 +1,12 @@
+<h1>Numérie</h1>
 <ul>
     <li><a href="/?page=home">Home</a></li>
     
     <?php if ($user === false) { ?>
-
+       
         <li><a href="/?page=signup">SignUp</a></li>
         <li><a href="/?page=login">Login</a></li>
-
+        <li><a href="/?page=info">Infos</a></li>
     <?php } else if ($user->role >= 200) { ?>
 
         <li><a href="/?page=profile">Profil</a></li>

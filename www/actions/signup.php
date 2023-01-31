@@ -9,11 +9,11 @@ require_once __DIR__ . '/../../src/init.php';
 
 //error_die($_POST['manager'], '/?page=signup');
 
-if (empty($_POST['fullname']) || empty($_POST['email']) || empty($_POST['password']) || empty($_POST['cpassword'])) {
+if (empty($_POST['nom_user']) ||empty($_POST['prenom_user']) || empty($_POST['telephone_user']) || empty($_POST['adresse_user']) ||  empty($_POST['email_user']) || empty($_POST['password']) || empty($_POST['Cpassword'])) {
     error_die('Veuillez remplir tous les champs', '/?page=signup');
 }
 
-if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) === false){
+if (filter_var($_POST['email_user'], FILTER_VALIDATE_EMAIL) === false){
     error_die('Email non valide.', '/?page=signup');
 }
 
@@ -21,11 +21,11 @@ if (strlen($_POST['password']) < 8) {
     error_die('Mot de passe trop court', '/?page=signup');
 }
 
-if ($_POST['password'] != $_POST['cpassword']) {
+if ($_POST['password'] != $_POST['Cpassword']) {
     error_die('Les deux mots de passe sont différents', '/?page=signup');
 }
-
-$alreadyUser = $userManager->getByEmail($_POST['email']);
+ 
+$alreadyUser = $userManager->getByEmail($_POST['email_user']);
 if ($alreadyUser !== false) {
     error_die('Déjà inscrit', '/?page=signup');
 }
