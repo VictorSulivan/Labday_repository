@@ -1,0 +1,34 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    display: flex;
+    border-bottom: 2px solid gray;
+    background-color: rgb(146, 199, 94);
+}
+
+li {
+    margin: 10px;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+a:hover {
+    color: white;
+}
+
+h1 {
+    margin-left: 50px !important;
+}
+
+h2, h3, h4, p, select {
+    margin-left:20px;
+}
+
+
