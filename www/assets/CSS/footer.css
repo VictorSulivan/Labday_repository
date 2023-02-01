@@ -1,12 +1,10 @@
+footer{
+    
+}
+
 .barreBasse{
-    margin: 100px;
-}
-.one{
-
-}
-.two{
-
-}
-.three{
-
+    display: inline-block;
+    font-size: 18px;
+    margin: 15px;
+    flex-direction: row-reverse;
 }
