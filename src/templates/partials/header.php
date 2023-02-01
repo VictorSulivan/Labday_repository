@@ -1,13 +1,19 @@
-
-<h1>Numérie</h1>
 <ul class="divheaderone">
-    <li><a href="/?page=home" class="divheadertwo">Home</a></li>
-    
     <?php if ($user === false) { ?>
-       
+        <ul class="divheadertwo"><a href="/?page=home" >Menu</a>
+            <li><p>Procédures</p></li>
+            <li><p>Administratif</p></li>
+            <li><p>Soins</p></li>
+            <li><p>Études</p></li>
+            <li><p>Aides</p></li>
+            <li><p>Infos</p></li>
+            <li><p>Description</p></li>
+            <li><p>Settings</p></li>
+        </ul>
+        <li class="divheadertwo"><a href="/?page=home" >Home</a></li>
+        <li class="divheadertwo titlenumerie">Numérie</li>
         <li class="divheadertwo"><a href="/?page=signup">SignUp</a></li>
         <li class="divheadertwo"><a href="/?page=login">Login</a></li>
-        <li class="divheadertwo"><a href="/?page=info">Infos</a></li>
     <?php } else if ($user->role >= 200) { ?>
 
         <li><a href="/?page=profile">Profil</a></li>

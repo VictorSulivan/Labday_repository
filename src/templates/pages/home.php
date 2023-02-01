@@ -18,9 +18,38 @@ if ($user !== false) {
     <h2>Votre compte a été banni</h2>
    
 <?php }
-}
+}?>
+<div>
+    <div>
+        <div>
+            <div>
+                <p>vos cartes</p>
+            </div>
+            <div>
+                <p>Crer votre playlist</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <p>administrations</p>
+            </div>
+            <div>
+            <p>soins</p>
+            </div>
+            <div>
+            <p>etudes</p>
+            </div>
+            <div>
+            <p>listes utilisateur</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <p>infos</p>
+    </div>
+</div>
 
-
+<?php
 //echo '<p>'.var_dump($user).'</p>';
 
 

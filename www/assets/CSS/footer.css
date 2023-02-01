@@ -6,5 +6,20 @@ footer{
     display: inline-block;
     font-size: 18px;
     margin: 15px;
+
     flex-direction: row-reverse;
 }
+    .divheaderone{
+        
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        align-items: center;
+    }
+    .divheadertwo{
+        flex: auto;
+        margin-top: 100px;
+        align-items: center;
+
+    }
+

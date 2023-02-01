@@ -64,9 +64,9 @@ ob_start();
         <input type="password" id="Cpassword" name="Cpassword">
     </div>
 
-    <h3>Rôles supérieurs</h3>
+    <!--<h3>Rôles supérieurs</h3>
 
-    <!--<div class="form_input">
+    <div class="form_input">
         <label for="manager_key">Clé Manager</label>
         <input type="password" id="manager" name="manager">
     </div>

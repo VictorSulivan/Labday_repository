@@ -1,8 +1,13 @@
 .divheaderone{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    list-style-type: none;
 }
 .divheadertwo{
-    flex:1;
-    align-items: center;
+    flex:5;
+    margin-top: 100px;
+    
+}
+.titlenumerie{
+    size: 15%;
 }
