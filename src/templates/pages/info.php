@@ -10,22 +10,22 @@ ob_start();
 
 <h1>Page d'information</h1>
 
-<?php
-if ($user == false) {
-     ?>
-        <h2>Les nouvelles news!!!</h2>
-    
-   
-<?php 
-}
-
-if ($user !== false) {
-    if ($user->role >= 0) { ?>
-        <h2>Les nouvelles news!!!</h2>
-    
-   
-<?php }
-}
+<div>
+    <div>
+        <h2>les plus recents</h2>
+    </div>
+    <div>
+        <ul>
+            <li><img src="" alt=""><p>article</p></li>
+            <li><img src="" alt=""><p>article</p></li>
+            <li><img src="" alt=""><p>article</p></li>
+            <li><img src="" alt=""><p>article</p></li>
+            <li><img src="" alt=""><p>article</p></li>
+            <li><img src="" alt=""><p>article</p></li>
+            <li><img src="" alt=""><p>article</p></li>
+        </ul>
+    </div>
+</div>
 
 
 

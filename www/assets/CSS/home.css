@@ -1,0 +1,55 @@
+.blockn1{
+    display: flex;
+    flex-direction: row;
+}
+.blockn2{
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+.blockn3{
+    display: flex;
+    flex: 1;
+}
+.blockn4{
+    flex: 1;
+    flex-direction: column;
+}
+.blockn5{
+    flex: 2;
+    flex-direction: row;
+    
+}
+.blockn6{
+    flex: 1;
+}
+.blockn7{
+    flex: 1;
+}
+.blockn8{
+    flex:1;
+    margin:15px;
+}
+.blockn9{
+    flex: 1;
+    margin:15px;
+}
+.blockn10{
+    flex: 1;
+    margin:15px;
+}
+.blockn11{
+    flex: 1;
+    margin:15px;
+}
+.blockn12{
+    flex-direction: row;
+    flex: 1;
+}
+.blockn13{
+    flex-direction: row;
+    flex: 1;
+}
+.title3home{
+    text-align:center;
+}
