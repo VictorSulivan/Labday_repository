@@ -1,36 +1,30 @@
-<ul>
-    <li><a href="/?page=home">Home</a></li>
+<ul class="divheaderone">
     
-    <?php if ($user === false) { ?>
-
-        <li><a href="/?page=signup">SignUp</a></li>
-        <li><a href="/?page=login">Login</a></li>
-
-    <?php } else if ($user->role >= 200) { ?>
-
+        <li class="divheadertwo"><a href="/?page=home" >Home</a></li>
+        <li class="divheadertwo titlenumerie">Numérie</li>
+        <li class="divheadertwo"><a href="/?page=signup">SignUp</a></li>
+        <li class="divheadertwo"><a href="/?page=login">Login</a></li>
         <li><a href="/?page=profile">Profil</a></li>
+    
+
+        
         <li><a href="/?page=account_verification">Vérifier compte</a></li>
         <li><a href="/?page=operation_verification">Vérifier opérations</a></li>
         <li><a href="/?page=operations">Opérations</a></li>        
         <li><a href="/actions/logout.php">Logout</a></li>
 
-    <?php } else if ($user->role > 1){ ?>
-
-        <li><a href="/?page=profile">Profil</a></li>
-        <li><a href="/?page=operations">Opérations</a></li>        
-        <li><a href="/actions/logout.php">Logout</a></li>
-
-    <?php } else if ($user->role > 0){ ?>
-
-        <li><a href="/?page=profile">Profil</a></li>
-        <li><a href="/actions/logout.php">Logout</a></li>
-
-    <?php } else { ?>
-
-        <li><a href="/actions/logout.php">Logout</a></li>
-
-    <?php    } ?>
-   
+    
+        <li><ul class="divheadertwo">Menu</a>
+            <li><p>Procédures</p></li>
+            <li><p>Administratif</p></li>
+            <li><p>Soins</p></li>
+            <li><p>Études</p></li>
+            <li><p>Aides</p></li>
+            <li><p>Infos</p></li>
+            <li><p>Description</p></li>
+            <li><p>Settings</p></li>
+        </ul></li>
+       
 </ul>
 
 <!--<div class="container">
@@ -81,5 +75,6 @@
     <?php    } ?>
 
 
-    </header>
-  </div>-->
+    </header>-->
+  
+</header>

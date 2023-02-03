@@ -94,3 +94,4 @@ if (isset($_POST['deny_w'])) {
 }
 
 header('Location: /?page=operation_verification');
+

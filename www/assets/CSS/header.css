@@ -1,34 +1,13 @@
-body {
-    padding: 0;
-    margin: 0;
-}
-
-ul {
+.divheaderone{
     display: flex;
-    border-bottom: 2px solid gray;
-    background-color: rgb(146, 199, 94);
-}
-
-li {
-    margin: 10px;
+    flex-direction: row;
     list-style-type: none;
 }
-
-a {
-    text-decoration: none;
-    color: currentColor;
+.divheadertwo{
+    flex:1;
+    margin-top: 100px;
+    
 }
-
-a:hover {
-    color: white;
+.titlenumerie{
+    size: 15%;
 }
-
-h1 {
-    margin-left: 50px !important;
-}
-
-h2, h3, h4, p, select {
-    margin-left:20px;
-}
-
-
