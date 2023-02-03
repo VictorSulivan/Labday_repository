@@ -20,12 +20,8 @@ ob_start();
     ?>
 
     <div class="form_input">
-        <label for="fullname">Nom </label>
-        <input type="text" id="fullname" name="fullname">
-    </div>
-    <div class="form_input">
-        <label for="Prenom">Prenom</label>
-        <input type="text" id="fullname" name="fullname">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
     </div>
     <div class="form_input">
         <label for="password">Mot de Passe</label>
