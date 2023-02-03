@@ -20,7 +20,7 @@ ob_start();
     ?>
 
     <div class="form_input">
-        <label for="email">Email</label>
+        <label for="email">Emailrftgyhytre</label>
         <input type="text" id="email" name="email">
     </div>
     <div class="form_input">

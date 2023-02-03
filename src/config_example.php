@@ -7,6 +7,7 @@ $config['db'] = [
     'user' => 'root',
     'pass' => 'root',
     'port' => 3306
+    
 ];
 
 $config['roles'] = [
