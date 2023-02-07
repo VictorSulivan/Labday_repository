@@ -8,78 +8,85 @@ ob_start();
 
 ?>
 
-<h1>Inscription</h1>
+<div class="All"></div>
 
-<div id="center">
+    <div id="center">
 
-<form action="/actions/signup.php" method="post" name="signup_form" id="signup_form">
+        <?php
+        include_once __DIR__ . '/../partials/alert_errors.php';
+        include_once __DIR__ . '/../partials/alert_success.php';
+        ?>
 
-    <?php
-    include_once __DIR__ . '/../partials/alert_errors.php';
-    include_once __DIR__ . '/../partials/alert_success.php';
-    ?>
+        <div class="login-box">
+            <h2>Inscription</h2>
+            <form>
+                <div class="user-box">
+                    <input type="text" id="nom_user" name="nom_user">
+                    <label>Nom</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" id="prenom_user" name="prenom_user">
+                    <label>Prénom</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" id="deuxieme_prenom_user" name="deuxieme_prenom_user">
+                    <label>Deuxième prénom</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" id="date_de_naissance_user" name="date_de_naissance_user">
+                    <label>Date de naissance</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" id="adresse_domicile_user" name="adresse_domicile_user">
+                    <label>Adresse</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" id="telephone_user" name="telephone_user">
+                    <label>Numéro</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" id="email_user" name="email_user">
+                    <label>Email</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" id="status_marital_user" name="status_marital_user">
+                    <label>Status marital</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" id="numero_secu_social_user" name="numero_secu_social_user">
+                    <label>Numéro de sécurité social</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" id="password" name="password">
+                    <label>Mot de passe</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" id="Cpassword" name="Cpassword">
+                    <label>Confirmez le mot de passe</label>
+                </div>
+                <a href="#" type="submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+                </a>
+            </form>
+        </div>
 
-    <div class="form_input">
-        <label for="nom_user">Nom </label>
-        <input type="text" id="nom_user" name="nom_user">
-    </div>
-    <div class="form_input">
-        <label for="prenom_user">Prenom</label>
-        <input type="text" id="prenom_user" name="prenom_user">
-    </div>
-    <div class="form_input">
-        <label for="deuxieme_prenom_user">deuxieme prenom</label>
-        <input type="text" id="deuxieme_prenom_user" name="deuxieme_prenom_user">
-    </div>
-    <div class="form_input">
-        <label for="date_de_naissance_user">date_de_naissance</label>
-        <input type="text" id="date_de_naissance_user" name="date_de_naissance_user">
-    </div>
-    <div class="form_input">
-        <label for="adresse_domicile_user">adresse domicile</label>
-        <input type="text" id="adresse_domicile_user" name="adresse_domicile_user">
-    </div>
-    <div class="form_input">
-        <label for="telephone_user">telephone</label>
-        <input type="text" id="telephone_user" name="telephone_user">
-    </div>
-    <div class="form_input">
-        <label for="email_user">email</label>
-        <input type="text" id="email_user" name="email_user">
-    </div>
-    <div class="form_input">
-        <label for="status_marital_user">status marital</label>
-        <input type="text" id="status_marital_user" name="status_marital_user">
-    </div>
-    <div class="form_input">
-        <label for="numero_secu_social_user">numero secu social</label>
-        <input type="text" id="numero_secu_social_user" name="numero_secu_social_user">
-    </div>
-    <div class="form_input">
-        <label for="password">password</label>
-        <input type="password" id="password" name="password">
-    </div>
-    <div class="form_input">
-        <label for="Cpassword">Confirmez password</label>
-        <input type="password" id="Cpassword" name="Cpassword">
-    </div>
+        <!--<h3>Rôles supérieurs</h3>
 
-    <!--<h3>Rôles supérieurs</h3>
+        <div class="form_input">
+            <label for="manager_key">Clé Manager</label>
+            <input type="password" id="manager" name="manager">
+        </div>
 
-    <div class="form_input">
-        <label for="manager_key">Clé Manager</label>
-        <input type="password" id="manager" name="manager">
+        <div class="form_input">
+            <label for="admin_key">Clé Admin</label>
+            <input type="password" id="admin" name="admin">
+        </div>-->
+
     </div>
-
-    <div class="form_input">
-        <label for="admin_key">Clé Admin</label>
-        <input type="password" id="admin" name="admin">
-    </div>-->
-
-    <button type="submit">Signup</button>
-
-</form>
-
 </div>
 
 <?php

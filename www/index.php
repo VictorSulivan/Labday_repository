@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . "/../src/init.php";
+require_once "../src/init.php";
 
 $page = 'home';
 
@@ -10,5 +10,5 @@ if (isset($_GET['page'])) {
 }
 
 
-include_once __DIR__ . "/../src/templates/pages/$page.php";
-include_once __DIR__ . "/../src/templates/template.php";
+include_once "../src/templates/pages/$page.php";
+include_once "../src/templates/template.php";

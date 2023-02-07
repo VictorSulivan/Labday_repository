@@ -8,33 +8,32 @@ ob_start();
 
 ?>
 
-<h1>Connexion</h1>
+<div class = All>
 
-<div id="center">
-
-<form action="/actions/login.php" method="post" id="login_form">
-
-    <?php
-    include_once __DIR__ . '/../partials/alert_errors.php';
-    include_once __DIR__ . '/../partials/alert_success.php';
-    ?>
-
-    <div class="form_input">
-        <label for="fullname">Nom </label>
-        <input type="text" id="fullname" name="fullname">
+    <div class="login-box">
+        <h2>Connection</h2>
+        <form>
+            <div class="user-box">
+                <input type="text" id="fullname" name="fullname">
+                <label>Nom</label>
+            </div>
+            <div class="user-box">
+                <input type="text" id="fullname" name="fullname">
+                <label>Prénom</label>
+            </div>
+            <div class="user-box">
+                <input type="password" id="password" name="password">
+                <label>Mot de passe</label>
+            </div>
+            <a href="#" type="submit">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+            </a>
+        </form>
     </div>
-    <div class="form_input">
-        <label for="Prenom">Prenom</label>
-        <input type="text" id="fullname" name="fullname">
-    </div>
-    <div class="form_input">
-        <label for="password">Mot de Passe</label>
-        <input type="password" id="password" name="password">
-    </div>
-
-    <button type="submit">Login</button>
-
-</form>
 
 </div>
 

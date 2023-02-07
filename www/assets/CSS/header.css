@@ -1,13 +1,135 @@
+header{
+    background-color: rgb(14, 14, 41);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 18px;
+}
+
 .divheaderone{
     display: flex;
     flex-direction: row;
     list-style-type: none;
 }
-.divheadertwo{
-    flex:1;
-    margin-top: 100px;
-    
+
+#divheadertwo{
+    display: inline-block;
+    vertical-align: top;
 }
+
 .titlenumerie{
-    size: 15%;
+    font-size: 50px;
+    padding-left: 33%;
+    padding-right: 10%;
+}
+
+:root{
+    --hauteur-menu: 60px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    width: 100%;
+    position: sticky;
+    top: O;
+}
+
+nav > ul{
+    display: flex;
+    text-align: center;
+    box-shadow: 0px 1px 2px 1px rgba (0, 0, 0, 0.3);
+    height: var(--hauteur-menu);
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav > ul > li{
+    position: relative;
+    height: 100%;
+    flex: 1;
+}
+
+nav > ul > li > a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+li a{
+    text-decoration: none;
+    color: rgb(202, 197, 221);
+}
+
+.menu-deroulant > a:after{
+    content: "-o";
+    margin-left: 7px;
+    display: inline-block; 
+}
+
+.sous-menu{
+    margin-top: var(--hauteur-menu);
+    width: 100%;
+    text-align: left;
+    background-color: rgb(16, 16, 51);
+    border-radius: 7px;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.sous-menu > li > a{
+    height: 45px;
+    padding-left: 20px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+
+nav > ul > li:hover > a{
+    color: rgb(109, 176, 227);
+}
+
+.sous-menu > li:hover{
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 10px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 40px #03e9f4;
+}
+
+
+
+@keyframes rotationFleche{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+
+.menu-deroulant:hover > a:after{
+    animation: rotationFleche 0.2s linear forwards;
+}
+
+@keyframes apparitionSousMenu{
+    0%{
+        box-shadow: 0px 3px 3px 1px rgba(50, 50, 51, 50);
+        border-top: 3px solid rgba(100, 100, 100, 50)
+    }
+    30%{
+        box-shadow: 0px 3px 3px 1px rgba(150, 45, 51, 50);
+    }
+    100%{
+        max-height: 50em;
+        border-top: 0px 3px 3px 1px rgba(150, 45, 51, 50);
+    }
+}
+
+.menu-deroulant:hover > .sous-menu{
+    animation: apparitionSousMenu 1s forwards;
 }

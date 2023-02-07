@@ -4,7 +4,7 @@
 //protocol:
 //mysql:host=C_DB_HOST; dbname=C_DB_NAME; port=C_DB_PORT
 
-require_once __DIR__ . '/config.php';
+// require_once __DIR__ . '/config.php';
 
 try {
     $dsn = 'mysql:host='.$config['db']['host'].';dbname='.$config['db']['name'].';port='.$config['db']['port'];

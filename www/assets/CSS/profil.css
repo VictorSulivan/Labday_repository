@@ -1,19 +1,10 @@
 body{
-  margin:auto !important;
-  width: 100% !important;
+  margin:auto;
+  width: 100%;
 }
 
-h1 {
-  margin-left: 50px !important;
-}
 
-h2, h3, h4 {
-  margin-left:20px;
-}
 
-.operation, p {
-  margin-left: 30px;
-}
 
 /*.form-control-dark {
   border-color: var(--bs-gray);
