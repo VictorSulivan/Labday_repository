@@ -1,8 +1,54 @@
 body{
-  margin:auto;
+  height: 100%;
   width: 100%;
+  margin: auto;
+  color: aliceblue;
 }
 
+.All{
+  height: 100%;
+  width: 100%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  display: flex;
+  justify-content:space-evenly;
+}
+
+.side{
+  display: flex;
+  justify-content:space-evenly;
+}
+
+#border{
+  border: 1px solid rgb(16, 16, 51);
+  border-radius: 20px;
+  background-color: rgb(25, 25, 68);
+  padding: 30px;
+  font-size: 18px;
+}
+
+p{
+  padding-left: 6%;
+  padding-bottom: 15px;
+}
+
+.news{
+  height: 88%;
+  width: 100%;
+  padding-right: 90%;
+}
+
+
+h3{
+  font-size: 28px;
+  text-align: center;
+  padding: 30px;
+}
+
+.space{
+  padding: 10px;
+  margin: 0;
+}
 
 
 
