@@ -4,14 +4,14 @@
             <li id="divheadertwo" class="menu-deroulant">
                 <a href="#">Menu</a>
                 <ul class="sous-menu">
-                    <li><a>Procédures</a></li>
-                    <li><a>Administratif</a></li>
-                    <li><a>Soins</a></li>
-                    <li><a>Études</a></li>
-                    <li><a>Aides</a></li>
-                    <li><a>Infos</a></li>
-                    <li><a>Description</a></li>
-                    <li><a>Settings</a></li>
+                    <li><a href="/?page=">Procédures</a></li>
+                    <li><a href="/?page=admin_file">Administratif</a></li>
+                    <li><a href="/?page=soins_file">Soins</a></li>
+                    <li><a href="/?page=etudes_file">Études</a></li>
+                    <li><a href="/?page=">Aides</a></li>
+                    <li><a href="/?page=info">Infos</a></li>
+                    <li><a href="/?page=">Description</a></li>
+                    <li><a href="/?page=">Settings</a></li>
                 </ul>
             </li>
 

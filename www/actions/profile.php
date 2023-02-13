@@ -6,7 +6,7 @@ require_once __DIR__ . "/../../src/init.php";
 $stmh = $db->prepare('SELECT money, id FROM bankaccounts WHERE id_user = ?');
 $stmh->execute([$utilisateur['id']]);
 $actual_money = $stmh->fetch();
-<?php
+
 
 require_once __DIR__ . "/../../src/init.php";
 
