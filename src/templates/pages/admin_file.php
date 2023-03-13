@@ -6,7 +6,7 @@ $page_title = "administratif file";
 
 ob_start();
 
-?>admin
+?>
 
 <h1>Page des fichiers administratif</h1>
 <div>
