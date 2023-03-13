@@ -97,8 +97,8 @@ nav > ul > li:hover > a{
 .sous-menu > li:hover{
     box-shadow: 0 0 5px #03e9f4,
                 0 0 10px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 40px #03e9f4;
+                0 0 15px #03e9f4,
+                0 0 20px #03e9f4;
 }
 
 
@@ -131,5 +131,5 @@ nav > ul > li:hover > a{
 }
 
 .menu-deroulant:hover > .sous-menu{
-    animation: apparitionSousMenu 1s forwards;
+    animation: apparitionSousMenu 2s forwards;
 }

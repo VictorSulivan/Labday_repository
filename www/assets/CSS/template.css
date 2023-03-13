@@ -1,9 +1,7 @@
 body{
-    width: 100%;
-    height: 100%;
     background: linear-gradient(#020024,#090979,#00d4ff);
-    background-size:cover;
-    background-repeat: no-repeat;
+    background-size:100%;
+    background-repeat:no-repeat;
 }
 p, h1, h2, li{
     color: aliceblue;
