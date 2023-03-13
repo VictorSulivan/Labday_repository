@@ -21,47 +21,43 @@ ob_start();
             <h2>Inscription</h2>
             <form>
                 <div class="user-box">
-                    <input type="text" id="nom_user" name="nom_user">
+                    <input type="text" id="nom_user" name="nom_user" required>
                     <label>Nom</label>
                 </div>
                 <div class="user-box">
-                    <input type="text" id="prenom_user" name="prenom_user">
+                    <input type="text" id="prenom_user" name="prenom_user" required>
                     <label>Prénom</label>
                 </div>
                 <div class="user-box">
-                    <input type="password" id="deuxieme_prenom_user" name="deuxieme_prenom_user">
+                    <input type="text" id="deuxieme_prenom_user" name="deuxieme_prenom_user">
                     <label>Deuxième prénom</label>
                 </div>
                 <div class="user-box">
-                    <input type="text" id="date_de_naissance_user" name="date_de_naissance_user">
+                    <input type="datetime-local" id="date_de_naissance_user" name="date_de_naissance_user" required>
                     <label>Date de naissance</label>
                 </div>
                 <div class="user-box">
-                    <input type="text" id="adresse_domicile_user" name="adresse_domicile_user">
+                    <input type="text" id="adresse_domicile_user" name="adresse_domicile_user" requiered>
                     <label>Adresse</label>
                 </div>
                 <div class="user-box">
-                    <input type="text" id="telephone_user" name="telephone_user">
-                    <label>Numéro</label>
+                    <input type="tel" id="telephone_user" name="telephone_user">
+                    <label>Numéro de télephone</label>
                 </div>
                 <div class="user-box">
-                    <input type="text" id="email_user" name="email_user">
+                    <input type="mail" id="email_user" name="email_user" required>
                     <label>Email</label>
                 </div>
-                <div class="user-box">
-                    <input type="text" id="status_marital_user" name="status_marital_user">
-                    <label>Status marital</label>
-                </div>
-                <div class="user-box">
+                <!--<div class="user-box">
                     <input type="text" id="numero_secu_social_user" name="numero_secu_social_user">
                     <label>Numéro de sécurité social</label>
-                </div>
+                </div>-->
                 <div class="user-box">
-                    <input type="text" id="password" name="password">
+                    <input type="password" id="password" name="password" required pattern="[a-z0-5]{8,}">
                     <label>Mot de passe</label>
                 </div>
                 <div class="user-box">
-                    <input type="text" id="Cpassword" name="Cpassword">
+                    <input type="password" id="Cpassword" name="Cpassword" required pattern="[a-z0-5]{8,}">
                     <label>Confirmez le mot de passe</label>
                 </div>
                 <a href="#" type="submit">
