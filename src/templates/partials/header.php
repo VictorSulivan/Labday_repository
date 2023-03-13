@@ -8,7 +8,7 @@
                     <li><a href="/?page=admin_file">Administratif</a></li>
                     <li><a href="/?page=soins_file">Soins</a></li>
                     <li><a href="/?page=etudes_file">Études</a></li>
-                    <li><a href="/page=judicaire">Judicaire</a></li>
+                    <li><a href="/?page=judicaire">Judicaire</a></li>
                     <li><a href="/?page=help_page">Aides</a></li>
                     <li><a href="/?page=info">Infos</a></li>
                     <li><a href="/?page=description">Description</a></li>

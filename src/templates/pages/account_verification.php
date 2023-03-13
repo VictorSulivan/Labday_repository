@@ -15,7 +15,7 @@ ob_start();
 include_once __DIR__ . '/../partials/alert_errors.php';
 include_once __DIR__ . '/../partials/alert_success.php';
 
-if ($user->role < 200) {
+if ($usr->role < 10) {
     header('Location: /?page=home');
 }
 
