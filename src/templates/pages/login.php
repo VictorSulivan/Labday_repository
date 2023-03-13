@@ -14,15 +14,15 @@ ob_start();
         <h2>Connection</h2>
         <form>
             <div class="user-box">
-                <input type="text" id="fullname" name="fullname">
+                <input type="text" id="fullname" name="fullname" required>
                 <label>Nom</label>
             </div>
             <div class="user-box">
-                <input type="text" id="fullname" name="fullname">
+                <input type="text" id="fullname" name="fullname" required>
                 <label>Prénom</label>
             </div>
             <div class="user-box">
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" required>
                 <label>Mot de passe</label>
             </div>
             <a href="#" type="submit">
