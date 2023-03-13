@@ -22,7 +22,7 @@ ob_start();
             <form>
                 <div class="user-box">
                     <input type="text" id="nom_user" name="nom_user">
-                    <label>Nom</label>
+                    <label>Nom </label>
                 </div>
                 <div class="user-box">
                     <input type="text" id="prenom_user" name="prenom_user">
