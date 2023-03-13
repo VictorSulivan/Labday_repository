@@ -35,4 +35,3 @@ $user = false;
 if (isset($_SESSION['user_id'])) {
     $user = $userManager->getById($_SESSION['user_id']);
 }
-
