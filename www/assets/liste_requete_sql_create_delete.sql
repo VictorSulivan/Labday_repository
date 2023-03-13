@@ -9,13 +9,15 @@ documents:
 exemple pour les 
 INSERT INTO `table docs`(`id`, `id_user`, `name_file`, `type_of_file`, `description_file`, `date_insert_file`) 
 VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]')
-formulaires:
+
 
 
 
 Delete:
 
 users:
+DELETE FROM `users` WHERE id = (id utilisateur)
 infos:
+DELETE FROM `users` WHERE id = (id de l article)
 documents:
-formulaires:
+DELETE FROM `users` WHERE id = (id de document)
