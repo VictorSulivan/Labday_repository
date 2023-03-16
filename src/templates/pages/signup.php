@@ -88,10 +88,13 @@ ob_start();
                                          // Préparer la requête SQL
                                         $insertmbr ="INSERT INTO users (nom, prenom, deuxieme_prenom, role, adresse_domicile, date_de_naissance, email, password) VALUES ('$nom', '$prenom', '$deuxiemeprenom','$role', '$adresse_domicile_user', '$date_de_naissance_user', '$mail', '$password')";
 
-                                        if (mysqli_query($dsn, $insertmbr)) {
+                                        if (mysqli_query($conn, $insertmbr)) {
                                             echo "Inscription réussie !";
-                                            //header('Location: login.php');
-                                            exit();
+                                            $_SESSION['compte_creer']="Votre pseudo";
+                                            // Redirige l'utilisateur vers la page de connexion
+                                            header('Location: /?page=login');
+                                            exit; // Assure que le script s'arrête ici pour éviter toute exécution supplémentaire
+
                                         } else {
                                             echo "Erreur: " . $sql . "<br>" . mysqli_error($conn);
                                         }
