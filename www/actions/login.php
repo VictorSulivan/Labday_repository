@@ -64,7 +64,7 @@ if (isset($_POST['Inscription'])) {
 
         $uppercase = preg_match('@[A-Z]@', $inscription_password);
         $lowercase = preg_match('@[a-z]@', $inscription_password);
-        $number    = preg_match('@[0-9]@', $inscription_password);
+        $number = preg_match('@[0-9]@', $inscription_password);
         $specialChars = preg_match('@[^\w]@', $inscription_password);
         if (!$uppercase || !$lowercase || !$number || !$specialChars || mb_strlen($inscription_password) < 8) {
             $error = true;
@@ -99,4 +99,3 @@ if (isset($_POST['Inscription'])) {
         exit();
     }
 }
-?>
