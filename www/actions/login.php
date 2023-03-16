@@ -2,10 +2,12 @@
 
 require_once __DIR__ . '/../../src/init.php';
 
-//Login
-$error = false;
+// Start the session
+session_start();
 
+// Login
 if (isset($_POST['Connexion'])) {
+    $error = false;
 
     if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         $email = $_POST['email'];
@@ -18,32 +20,26 @@ if (isset($_POST['Connexion'])) {
     if (!$error) {
         $requeteLogin = 'SELECT * FROM users WHERE email = ? AND password = ?';
 
+        // Prepare the statement
         $requeteStatment = $conn->prepare($requeteLogin);
+
+        // Execute the query
         $requeteStatment->execute([$email, hash('sha256', $password)]);
+
+        // Fetch the result
         $requete = $requeteStatment->fetch();
 
         if (!empty($requete)) {
-            if ($requete['role'] == 1000 || $requete['role'] == 200) {
-                $_SESSION['user'] = $requete;
-                header('Location: /?page=home');
-                exit();
-            } else if ($requete['role'] == 1 || $requete['role'] == 0) {
-                $_SESSION['user'] = $requete;
-                header('Location: /?page=home');
-                exit();
-            } else if ($requete['role'] == 10) {
-                $_SESSION['user'] = $requete;
-                header('Location: /?page=home');
-                exit();
-            }
+            $_SESSION['user'] = $requete;
+            header('Location: /?page=home');
+            exit();
         }
     }
 }
 
-//register
-$error = false;
-
+// Register
 if (isset($_POST['Inscription'])) {
+    $error = false;
 
     if (isset($_POST['inscription_email_user'])) {
         if (filter_var($_POST['inscription_email_user'], FILTER_VALIDATE_EMAIL)) {
@@ -54,7 +50,6 @@ if (isset($_POST['Inscription'])) {
     } else {
         $error = true;
     }
-
 
     $nom_u = $_POST['nom_user'];
     $prenom_u = $_POST['prenom_user'];
@@ -88,14 +83,23 @@ if (isset($_POST['Inscription'])) {
     }
 
     if (!$error) {
+        // Prepare the statement
+        $statement = $conn->prepare('INSERT INTO users (nom, prenom, phone, email, password) VALUES (?, ?, ?, ?, ?)');
+    }
+    // Hash
+
+    if (!$error) {
         $new_mdp = hash('sha256', $inscription_password);
 
-        $statement->execute([$nom_u, $prenom_u, $phone, $inscription_email_user, $new_mdp]);
+        // Creating a new user in the database
+        $insertUserQuery = "INSERT INTO users(nom_u, prenom_u, telephone, email, password) VALUES (?, ?, ?, ?, ?)";
+        $statement = $conn->prepare($insertUserQuery);
+        $statement->execute([$nom_u, $prenom_u, $telephone, $inscription_email_user, $new_mdp]);
 
-        header('Location: /?page=login');
+        //header('Location: /?page=login');
         exit();
     } else {
-        header('Location: /?page=login');
+        //header('Location: /?page=login');
         exit();
     }
 }
