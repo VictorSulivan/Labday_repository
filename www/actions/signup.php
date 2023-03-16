@@ -1,4 +1,4 @@
-<?php
+ <?php /*
 
     require_once __DIR__ . '/../../src/init.php';
 ?>
@@ -6,39 +6,22 @@
     $valid = true;
     $err = array();
 
-    $date = new DateTime('now', new DateTimeZone('Europe/Paris'));
-    $date = $date->format('m/d/Y h:i:s a');
+$alreadyUser = $userManager->getByEmail($_POST['email_user']);
+if ($alreadyUser !== false) {
+    error_die('Déjà inscrit', '/?page=signup');
+}
 
-    if (isset($_POST['submit'])) {
-        $nom_user = trim($_POST['nom_user']);
-        $prenom_user = trim($_POST['prenom_user']);
-        $deuxieme_prenom_user = trim($_POST['deuxieme_prenom_user']);
-        $email_user = trim($_POST['email_user']);
-        $password = trim($_POST['password']);
-        $cpassword = trim($_POST['cpassword']);
+$user_role = 1;
+$manager_key = 'manager';
+$admin_key = 'admin';
 
-        if (!isset($_POST['email_user'])) {
-            $valid = false;
-            $err['email_user'] = " Ce champ ne peut pas être vide";
-        }
-        if (!filter_var($email_user, FILTER_VALIDATE_EMAIL)) {
-            $valid = false;
-            $err[''] = "Email not valid";
-        }
-        if (!isset($_POST['password'])) {
-            $valid = false;
-            $err['password'] = " Ce champ ne peut pas être vide";
-        }
+if (!empty($_POST['manager']) && !empty($_POST['admin'])) {
+    error_die('Vous ne pouvez avoir qu\'un seul rôle', '/?page=signup');
+}
 
-        if (!isset($_POST['cpassword'])) {
-            $valid = false;
-            $err['cpassword'] = "Ce champ ne peut pas être vide";
-        }
-
-        if ($password !== $confpassword) {
-            $valid = false;
-            $err[''] = "Le mot de passe est différent de la confirmation";
-        }
+if (!empty($_POST['manager'])) {
+    if ($_POST['manager'] == $manager_key) {
+        $user_role = 200;
     }
 
 
@@ -75,5 +58,5 @@
 
     $_SESSION['user_id'] = $userId;
 
-    header('Location: /?page=home');
-/*
+header('Location: /?page=home');
+*/

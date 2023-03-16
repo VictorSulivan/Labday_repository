@@ -7,8 +7,16 @@ $page_title = "profil user!";
 ob_start();
 
 ?>
+<?php
+if(isset($_GET['id']) and $_GET['id']>0){
+    $getid=intval($_GET['id']);
+    $requprofilone=$conn->prepare('SELECT * FROM users WHERE id=?');
+    $requprofilone->execute(array($getid));
+    $userinfo=$requprofilone->fetch();
+}
+?>
 
-<h1>Page d'accueil</h1>
+<h1>Page de profil de <p>prenom:<?php echo $userinfo['prenom'];?></h1>
 
 <div>
     <div>
@@ -16,6 +24,7 @@ ob_start();
             <h3>
                 Information de profil
             </h3>
+            <p>prenom:<?php echo $userinfo['prenom'];?>
         </div>
         <div>
             <!--phto du profil
@@ -38,6 +47,7 @@ ob_start();
         </div>
     </div>
 </div>
+
 
 <?php
 

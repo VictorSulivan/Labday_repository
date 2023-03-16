@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-require_once 'config.php';
-require_once 'db.php';
+require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/db.php';
 
 //fonctions utilitaires
 require_once __DIR__ . '/utils/errors.php';
@@ -18,7 +18,7 @@ require_once __DIR__ . '/utils/errors.php';
 } */
 
 //pages existantes sur notre site internet
-$pages = ['home', 'login', 'signup','account_verification','operations/conversion','profile','info','contact','admin_file','etudes_files','soins_file','settings','procedures','help_page','description'];
+$pages = ['home', 'login', 'signup','account_verification','operations/conversion','profile','info','contact','admin_file','etudes_file','soins_file','settings','description','procedures','aide'];
 
 //init variables vides pour le template
 $head_metas = "";
