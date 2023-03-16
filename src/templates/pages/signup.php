@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $page_title = "Inscription";
 
@@ -8,80 +8,59 @@ ob_start();
 
 ?>
 
-<div class="All"></div>
+<?php
+include_once __DIR__ . '/../partials/alert_errors.php';
+include_once __DIR__ . '/../partials/alert_success.php';
+?>
 
-    <div id="center">
-
-        <?php
-        include_once __DIR__ . '/../partials/alert_errors.php';
-        include_once __DIR__ . '/../partials/alert_success.php';
-        ?>
-
-        <div class="login-box">
-            <h2>Inscription</h2>
-            <form>
-                <div class="user-box">
-                    <input type="text" id="nom_user" name="nom_user">
-                    <label>Nom </label>
-                </div>
-
-                <div class="user-box">
-                    <input type="text" id="prenom_user" name="prenom_user">
-                    <label>Prénom</label>
-                </div>
-
-                <div class="user-box">
-                    <input type="password" id="deuxieme_prenom_user" name="deuxieme_prenom_user">
-                    <label>Deuxième prénom</label>
-                </div>
-
-                <div class="user-box">
-                    <input type="date" id="date_de_naissance_user" name="date_de_naissance_user">
-                    <label>Date de naissance</label>
-                </div>
-
-                <div class="user-box">
-                    <input type="text" id="adresse_domicile_user" name="adresse_domicile_user">
-                    <label>Adresse</label>
-                </div>
-
-                <div class="user-box">
-                    <input type="tel" id="telephone_user" name="telephone_user">
-                    <label>Numéro</label>
-                </div>
-
-                <div class="user-box">
-                    <input type="text" id="email_user" name="email_user">
-                    <label>Email</label>
-                </div>
-
-                <div class="user-box">
-                    <input type="text" id="password" name="password">
-                    <label>Mot de passe</label>
-                </div>
-
-                <div class="user-box">
-                    <input type="text" id="Cpassword" name="Cpassword">
-                    <label>Confirmez le mot de passe</label>
-                </div>
-
-                <a href="#" type="submit">Submit</a>
-            </form>
+<div class="login-form">
+    <h3>Inscription</h3>
+    <form>
+        <div class="user-box">
+            <input type="text" placeholder="Votre nom de famille" <?php if (isset($nom_user)) {echo $nom_user;} ?> id="nom_user" name="nom_user" required="required" class="nom">
+            <label>Nom</label>
         </div>
 
-        <!--<h3>Rôles supérieurs</h3>
-
-        <div class="form_input">
-            <label for="manager_key">Clé Manager</label>
-            <input type="password" id="manager" name="manager">
+        <div class="user-box">
+            <input type="text" placeholder="Votre prénom" <?php if (isset($prenom_user)) {echo $prenom_user;} ?> id="prenom_user" name="prenom_user" required="required" class="prenom">
+            <label>Prénom</label>
         </div>
 
-        <div class="form_input">
-            <label for="admin_key">Clé Admin</label>
-            <input type="password" id="admin" name="admin">
-        </div>-->
+        <div class="user-box">
+            <input type="password" placeholder="Votre deuxième prénom" id="deuxieme_prenom_user" name="deuxieme_prenom_user" required="required" class="prenom2">
+            <label>Deuxième prénom</label>
+        </div>
 
-    </div>
+        <div class="user-box">
+            <input type="date" id="date_de_naissance_user" name="date_de_naissance_user" required="required" class="date">
+            <label>Date de naissance</label>
+        </div>
+
+
+
+        <div class="user-box">
+            <input type="tel" placeholder="01 01 01 01 01" id="telephone_user" name="telephone_user" required="required" class="tel">
+            <label>Numéro</label>
+        </div>
+
+        <div class="user-box">
+            <input type="text" placeholder="Votre@email.com" id="email_user" name="email_user" required="required" class="email">
+            <label>Email</label>
+        </div>
+
+        <div class="user-box">
+            <input type="text" placeholder="Mot de passe" id="password" name="password" required="required" class="password">
+            <label>Mot de passe</label>
+        </div>
+
+        <div class="user-box">
+            <input type="text" placeholder="Confirmez le mot de passe" id="Cpassword" name="Cpassword" required="required" class="cpassword">
+            <label>Confirmez le mot de passe</label>
+        </div>
+
+        <button type="submit" value="submit" name="submit" id="submit">Inscription</button>
+    </form>
+</div>
 </div>
 
 <?php

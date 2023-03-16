@@ -25,13 +25,7 @@ ob_start();
                 <input type="password" id="password" name="password">
                 <label>Mot de passe</label>
             </div>
-            <a href="#" type="submit">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Submit
-            </a>
+            <a href="#" type="submit">Submit</a>
         </form>
     </div>
 
