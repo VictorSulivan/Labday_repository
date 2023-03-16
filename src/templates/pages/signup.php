@@ -72,32 +72,28 @@ ob_start();
                     $mail = htmlspecialchars($_POST['email_user']);
                     $nomlength = strlen($nom);
                     $prenomlength = strlen($prenom);
-                    $servername = "localhost";
-                    $username = "root";
-                    $dbpassword = "root";
-                    $dbname = "projet_labday";
-                    $conn = mysqli_connect($servername, $username, $dbpassword, $dbname);
-                    if (!$conn) {
-                        die("La connexion a échoué: " . mysqli_connect_error());
-                    }
+                    
                     if($nomlength<=255){
                         if($prenomlength<=255){
                             
                             if($password==$Cpassword){
                                 if(filter_var($mail,FILTER_VALIDATE_EMAIL)){
-                                         // Préparer la requête SQL
-                                        $insertmbr ="INSERT INTO users (nom, prenom, deuxieme_prenom, role, adresse_domicile, date_de_naissance, email, password) VALUES ('$nom', '$prenom', '$deuxiemeprenom','$role', '$adresse_domicile_user', '$date_de_naissance_user', '$mail', '$password')";
+                                    // Vérification si l'utilisateur existe déjà dans la base de données
+                                    $stmt = $db->prepare('SELECT * FROM users WHERE email = ?');
+                                    $stmt->execute([$mail]);
+                                    $user = $stmt->fetch();
 
-                                        if (mysqli_query($conn, $insertmbr)) {
-                                            echo "Inscription réussie !";
-                                            $_SESSION['compte_creer']="Votre pseudo";
-                                            // Redirige l'utilisateur vers la page de connexion
-                                            header('Location: /?page=login');
-                                            exit; // Assure que le script s'arrête ici pour éviter toute exécution supplémentaire
-
-                                        } else {
-                                            echo "Erreur: " . $sql . "<br>" . mysqli_error($conn);
-                                        }
+                                    if ($user) {
+                                        // Si l'utilisateur existe déjà, affichage d'un message d'erreur
+                                        echo 'Cet email est déjà utilisé, veuillez en choisir un autre.';
+                                    } else {
+                                        $insertmbr = $db->prepare("INSERT INTO users (nom, prenom, deuxieme_prenom, role, adresse_domicile, date_de_naissance, email, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+                                        $insertmbr->execute([$nom, $prenom, $deuxiemeprenom, $role, $adresse_domicile_user, $date_de_naissance_user, $mail, $password]);
+                                        // Redirige l'utilisateur vers la page de connexion
+                                        header('Location: /?page=login');
+                                        exit; // Assure que le script s'arrête ici pour éviter toute exécution supplémentaire
+                                       
+                                        }           
                                     
                                 }else{
                                     $erreur = "c'est pas une adresse mail valide ca!";

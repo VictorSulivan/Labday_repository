@@ -5,6 +5,7 @@ $page_title = "Connexion";
 $head_metas = "<link rel=stylesheet href=assets/CSS/login.css>";
 
 ob_start();
+session_start();
 
 ?>
 
@@ -14,13 +15,10 @@ ob_start();
         <h2>Connection</h2>
         <form>
             <div class="user-box">
-                <input type="text" id="nameconnect" name="nameconnect" required>
-                <label>Nom</label>
+                <input type="email" id="mailconnect" name="mailconnect" required>
+                <label>Email</label>
             </div>
-            <div class="user-box">
-                <input type="text" id="prenameconnect" name="prenameconnect" required>
-                <label>Prénom</label>
-            </div>
+            
             <div class="user-box">
                 <input type="password" id="passwordconnect" name="passwordconnect" required>
                 <label>Mot de passe</label>
@@ -31,30 +29,34 @@ ob_start();
             if(isset($_POST['loginsubmitbutton']))
 
             {
-                $servername = "localhost";
-                $username = "root";
-                $dbpassword = "root";
-                $dbname = "projet_labday";
-                $conn = mysqli_connect($servername, $username, $dbpassword, $dbname);
-                $nomconnect = htmlspecialchars($_POST['nom_user']);
-                    $prenomconnect = htmlspecialchars($_POST['prenom_user']);
-                    $passwordconnect = sha1($_POST['password']);
-                if(!empty($_POST['nameconnect'])AND !empty($_POST['prenameconnect'])AND !empty($_POST['passwordconnect']))
+                    $mailconnect = htmlspecialchars($_POST['mailconnect']);
+                    $passwordconnect = sha1($_POST['passwordconnect']);
+                if(!empty($_POST['mailconnect'])AND !empty($_POST['passwordconnect']))
                 {
                     
                      // Préparer la requête SQL
-                    $verifuser =$conn->prepare("SELECT * FROM users WHERE prenom = ? and nom = ? and password = ? " );
-                    $verifuser->execute(array($prenomconnect,$nomconnect,$passwordconnect));
+                    $verifuser =$db->prepare('SELECT * FROM users WHERE email = ? ' );
+                    $verifuser->execute(array($mailconnect));
                     $userexist= $verifuser->rowCount();
-                    if($userexist==1){
-                        echo "lets go! you are a boss";
-                        // Redirige l'utilisateur vers la page de profile
-                        header('Location: /?page=profile');
-                        exit; // Assure que le script s'arrête ici pour éviter toute exécution supplémentaire
-
-                    }else{
-                        $erreur="Mauvais prenom,nom ou mdp" ;
+                    
+                        $userinfo=$verifuser->fetch();
+                        if ($user && password_verify($password, $user['password'])) {
+                            $_SESSION['user_id']=$userinfo['id'];
+                            $_SESSION['user_email']=$userinfo['email'];
+                            $_SESSION['user_password']=$userinfo['password'];
+                            $_SESSION['user_prenom']=$userinfo['prenom'];
+                            $_SESSION['user_nom']=$userinfo['nom'];
+                            $_SESSION['user_deuxieme_prenom']=$userinfo['deuxieme_prenom'];
+                            $_SESSION['user_role']=$userinfo['role'];
+                            $_SESSION['user_adresse_domicile']=$userinfo['adresse_domicile'];
+                            $_SESSION['user_date_de_naissance']=$userinfo['date_de_naissance'];
+                            header("Location: /?page=profile?id=".$_SESSION['id']);
+                            exit();
+                    } else {
+                        // Sinon, affichage d'un message d'erreur
+                        $erreur='Adresse email ou mot de passe incorrect.';
                     }
+                   
                                 
                 
                 

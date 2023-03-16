@@ -1,9 +1,8 @@
 <?php
-
 session_start();
-session_unset();
+
+// Détruit la session et redirige vers la page de connexion
 session_destroy();
-
-header('Location: /?page=home')
-
+header('Location: /?page=profile');
+exit();
 ?>
