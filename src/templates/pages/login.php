@@ -14,11 +14,11 @@ ob_start();
         <h2>Connection</h2>
         <form>
             <div class="user-box">
-                <input type="text" id="fullname" name="fullname" required>
+                <input type="text" id="name" name="name" required>
                 <label>Nom</label>
             </div>
             <div class="user-box">
-                <input type="text" id="fullname" name="fullname" required>
+                <input type="text" id="prename" name="prename" required>
                 <label>Prénom</label>
             </div>
             <div class="user-box">
@@ -26,10 +26,6 @@ ob_start();
                 <label>Mot de passe</label>
             </div>
             <a href="#" type="submit">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
             Submit
             </a>
         </form>
