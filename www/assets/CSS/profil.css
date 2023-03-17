@@ -4,6 +4,45 @@ body{
 }
 
 
+h1{
+  font-family:cursive;
+  padding: 20px;
+  padding-left: 35px;
+}
+
+
+h3, h4{
+  color: #03e9f4;
+  font-family:cursive;
+  padding-bottom: 15px;
+}
+
+.Info_profil{
+  padding: 20px;
+  width: 97%;
+}
+
+
+
+
+.second{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.div{
+  padding: 20px;
+  display: inline-block;
+}
+
+
+.content{
+  background-color: rgb(16, 16, 51);
+  border-radius: 20px;
+  padding: 30px;
+  height: 130px;
+}
+
 
 
 /*.form-control-dark {
