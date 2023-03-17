@@ -8,7 +8,7 @@
                     <li><a href="/?page=admin_file">Administratif</a></li>
                     <li><a href="/?page=soins_file">Soins</a></li>
                     <li><a href="/?page=etudes_file">Études</a></li>
-                    <li><a href="/?page=judicaire">Judicaire</a></li>
+                    <li><a href="/page=judicaire">Judicaire</a></li>
                     <li><a href="/?page=help_page">Aides</a></li>
                     <li><a href="/?page=info">Infos</a></li>
                     <li><a href="/?page=description">Description</a></li>
@@ -46,7 +46,7 @@
 
                     <li><a href="/?page=home" class="nav-link px-2 link-secondary">Home</a></li>
 
-                <?php } else if ($user->role >= 200) { ?>
+                <?php } else if ($user->role >= 1000) { ?>
 
                     <li><a href="/?page=profile" class="nav-link px-2 link-dark">Profil</a></li>
                     <li><a href="/?page=account_verification" class="nav-link px-2 link-dark">Vérifier compte</a></li>
@@ -54,13 +54,33 @@
                     <li><a href="/?page=operations" class="nav-link px-2 link-dark">Opérations</a></li>
                     <li><a href="/actions/logout.php" class="nav-link px-2 link-dark">Logout</a></li>
 
-                <?php } else if ($user->role > 1) { ?>
+                <?php } else if ($user->role > 200) { ?>
 
                     <li><a href="/?page=profile" class="nav-link px-2 link-dark">Profil</a></li>
                     <li><a href="/?page=operations" class="nav-link px-2 link-dark">Opérations</a></li>
                     <li><a href="/actions/logout.php" class="nav-link px-2 link-dark">Logout</a></li>
 
+                <?php } else if ($user->role > 40) { ?>
+
+
+
+                <?php } else if ($user->role > 30) { ?>
+
+
+
+                <?php } else if ($user->role > 20) { ?>
+
+
+
+                <?php } else if ($user->role > 10) { ?>
+
+
+
+                <?php } else if ($user->role > 1) { ?>
+                    
+
                 <?php } else if ($user->role > 0) { ?>
+
 
                     <li><a href="/?page=profile" class="nav-link px-2 link-dark">Profil</a></li>
                     <li><a href="/actions/logout.php" class="nav-link px-2 link-dark">Logout</a></li>
