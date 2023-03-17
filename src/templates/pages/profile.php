@@ -10,7 +10,7 @@ ob_start();
 
 // Vérification si l'utilisateur est connecté
 if (!isset($_SESSION['user_id'])) {
-    header('Location: connexion.php');
+    header('Location: /?page=login');
     exit();
 }
 
