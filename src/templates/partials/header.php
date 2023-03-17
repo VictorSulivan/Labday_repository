@@ -7,11 +7,11 @@
         <li><a href="/?page=profile">Profil</a></li>
     
 
-        
-        <li><a href="/?page=account_verification">Vérifier compte</a></li>
-        <li><a href="/?page=operation_verification">Vérifier opérations</a></li>
-        <li><a href="/?page=operations">Opérations</a></li>        
-        <li><a href="/actions/logout.php">Logout</a></li>
+            <li id="divheadertwo" class="titlenumerie">Numérie</li>
+            <li id="divheadertwo"><a href="/?page=login">Login</a></li>
+            <li id="divheadertwo"><a href="/?page=signup">SignUp</a></li>
+            <li><a href="/?page=logout.php">Logout</a></li>
+            <li id="divheadertwo" ><a href="/?page=profile">Profil</a></li>
 
     
         <li><ul class="divheadertwo">Menu</a>
