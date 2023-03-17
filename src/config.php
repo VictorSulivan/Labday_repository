@@ -16,7 +16,7 @@ $config['roles'] = [
     10 => "Utilisateur Vérifié",
     20 => "Soins",
     30 => "Etudes",
-    40 => "judicaire",
+    40 => "judiciaire",
     200 => "Administrations",
     1000 => "Admin"
 
