@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $page_title = "Connexion";
 
@@ -8,7 +8,7 @@ ob_start();
 
 ?>
 
-<div class = All>
+<div class=All>
 
     <div class="login-box">
         <h2>Connection</h2>
