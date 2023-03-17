@@ -18,7 +18,7 @@
             <li id="divheadertwo" class="titlenumerie">Numérie</li>
             <li id="divheadertwo"><a href="/?page=login">Login</a></li>
             <li id="divheadertwo"><a href="/?page=signup">SignUp</a></li>
-            <li><a href="/../../../www/actions/logout.php">Logout</a></li>
+            <li><a href="/?page=logout.php">Logout</a></li>
             <li id="divheadertwo" ><a href="/?page=profile">Profil</a></li>
 
         </ul>

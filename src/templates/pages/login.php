@@ -5,7 +5,6 @@ $page_title = "Connexion";
 $head_metas = "<link rel=stylesheet href=assets/CSS/login.css>";
 
 ob_start();
-session_start();
 
 ?>
 
@@ -13,7 +12,7 @@ session_start();
 
     <div class="login-box">
         <h2>Connection</h2>
-        <form>
+        <form method="POST">
             <div class="user-box">
                 <input type="email" id="mailconnect" name="mailconnect" required>
                 <label>Email</label>
@@ -35,25 +34,24 @@ session_start();
                 {
                     
                      // Préparer la requête SQL
-                    $verifuser =$db->prepare('SELECT * FROM users WHERE email = ? ' );
+                    $verifuser = $db->prepare('SELECT * FROM users WHERE email = ? ' );
                     $verifuser->execute(array($mailconnect));
-                    $userexist= $verifuser->rowCount();
+                    $userinfo=$verifuser->fetch();
                     
-                        $userinfo=$verifuser->fetch();
-                        if ($user && password_verify($password, $user['password'])) {
-                            $_SESSION['user_id']=$userinfo['id'];
-                            $_SESSION['user_email']=$userinfo['email'];
-                            $_SESSION['user_password']=$userinfo['password'];
-                            $_SESSION['user_prenom']=$userinfo['prenom'];
-                            $_SESSION['user_nom']=$userinfo['nom'];
-                            $_SESSION['user_deuxieme_prenom']=$userinfo['deuxieme_prenom'];
-                            $_SESSION['user_role']=$userinfo['role'];
-                            $_SESSION['user_adresse_domicile']=$userinfo['adresse_domicile'];
-                            $_SESSION['user_date_de_naissance']=$userinfo['date_de_naissance'];
-                            header("Location: /?page=profile?id=".$_SESSION['id']);
-                            exit();
+                    if ($passwordconnect==$userinfo['password']){
+                        $_SESSION['user_id']=$userinfo['id'];
+                        $_SESSION['user_email']=$userinfo['email'];
+                        $_SESSION['user_password']=$userinfo['password'];
+                        $_SESSION['user_prenom']=$userinfo['prenom'];
+                        $_SESSION['user_nom']=$userinfo['nom'];
+                        $_SESSION['user_deuxieme_prenom']=$userinfo['deuxieme_prenom'];
+                        $_SESSION['user_role']=$userinfo['role'];
+                        $_SESSION['user_adresse_domicile']=$userinfo['adresse_domicile'];
+                        $_SESSION['user_date_de_naissance']=$userinfo['date_de_naissance'];
+                        header("Location: ?page=profile&id=".$_SESSION['user_id']);
+                        exit();
                     } else {
-                        // Sinon, affichage d'un message d'erreur
+                        
                         $erreur='Adresse email ou mot de passe incorrect.';
                     }
                    
