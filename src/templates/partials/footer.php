@@ -9,8 +9,8 @@
     <div class="barreBasse two">
         <h2 class="TitreFooter">Nos Réseaux sociaux</h2>
         <br>
-        <a href="https://twitter.com/FalseGouv"><img src="assets/Images/twitter.svg" class="Ltwitter"></a>
-        <a href="https://www.instagram.com/gouvfalselabday/"><img src="assets/Images/instagram.svg" class="Linstagram"></a>
+        <a href="https://twitter.com/FalseGouv"><i class="fa-twitter"></i></a>
+        <a href="https://www.instagram.com/gouvfalselabday/"><i class="fa-instagram"></i></a>
     </div>
     <div class="barreBasse three">
         <h2>Copyright</h2>

@@ -21,13 +21,6 @@ ob_start();
             <li><p>emplacement de document</p></li>
             <li><p>emplacement de document</p></li>
             <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
         </ul>
     </div>
 </div>

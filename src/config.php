@@ -10,7 +10,7 @@ $config['db'] = [
 
 ];
 
-$config['roles'] = [
+$config['role'] = [
     0 => "Utilisateur Banni",
     1 => "Utilisateur Non-Vérifié",
     10 => "Utilisateur Vérifié",

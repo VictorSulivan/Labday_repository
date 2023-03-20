@@ -20,19 +20,21 @@ $stmt->execute([$_SESSION['user_id']]);
 $user = $stmt->fetch();
 ?>
 
-<h1>Page de profil de<?php echo $_SESSION['user_prenom'];?></h1>
+<h1>Page de profil de <?php echo $_SESSION['user_prenom'];?></h1>
 
 <div>
     <h3>Information de profil</h3>
-    <p>prenom:<?php echo $_SESSION['user_prenom'];?>
-    <p>nom:<?php echo $_SESSION['user_nom'];?>
-    <p>deuxiemes prenoms:<?php echo $_SESSION['user_deuxieme_prenom'];?>
-    <p>date de naissance:<?php echo $_SESSION['user_date_de_naissance'];?>
-    <p>adresse:<?php echo $_SESSION['user_adresse_domicile'];?>
-    <p>email:<?php echo $_SESSION['user_email'];?>
-    <p>numero de securité social:<?php echo $_SESSION['user_id'];?>
+    <p>prenom: <?php echo $_SESSION['user_prenom'];?>
+    <p>nom: <?php echo $_SESSION['user_nom'];?>
+    <p>deuxiemes prenoms: <?php echo $_SESSION['user_deuxieme_prenom'];?>
+    <p>date de naissance: <?php echo $_SESSION['user_date_de_naissance'];?>
+    <p>adresse: <?php echo $_SESSION['user_adresse_domicile'];?>
+    <p>email: <?php echo $_SESSION['user_email'];?>
+    <p>numero de securité social: <?php echo $_SESSION['user_id'];?>
 </div>
-
+<div>
+    <a href="/?page=logout">Logout</a>
+</div>
 
 <?php
 

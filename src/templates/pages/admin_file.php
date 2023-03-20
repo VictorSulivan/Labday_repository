@@ -6,21 +6,15 @@ $page_title = "administratif file";
 
 ob_start();
 
-?>admin
+?>
 
 <h1>Page des fichiers administratif</h1>
 <div>
     <div>
-        <p>ajouter un fichier</p>    
+        <a href="/?page=admin_choose_add_document">Ajouter un document</a>
     </div>
     <div>
         <ul>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
             <li><p>emplacement de document</p></li>
             <li><p>emplacement de document</p></li>
             <li><p>emplacement de document</p></li>
