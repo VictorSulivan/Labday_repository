@@ -8,7 +8,7 @@ require_once __DIR__ . '/db.php';
 require_once __DIR__ . '/utils/errors.php';
 
 //pages existantes sur notre site internet
-$pages = ['home', 'login', 'signup','account_verification','operations/conversion','profile','info','contact','admin_file','etudes_file','soins_file','settings','description','procedures','aide', 'logout','admin_add_form','admin_choose_add_document','admin_add_file','etudes_choose_add_document','etudes_add_form','etudes_add_file'];
+$pages = ['home', 'login', 'signup','account_verification','operations/conversion','profile','info','contact','admin_file','etudes_file','soins_file','settings','description','procedures','aide', 'logout','admin_add_form','admin_choose_add_document','admin_add_file','etudes_choose_add_document','etudes_add_form','etudes_add_file','soins_add_form','soins_choose_add_document','legal_file','legal_choose_add_document','legal_add_form','soins_add_file','legal_add_file'];
 
 //init variables vides pour le template
 $head_metas = "";

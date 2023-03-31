@@ -2,19 +2,20 @@
 
 require_once __DIR__ . '/../../init.php';
 
-$page_title = "soins file";
+$page_title = "legal file";
 
 ob_start();
 
 ?>
 
-<h1>Page des fichiers medicaux</h1>
+<h1>Page des fichiers judiciaire</h1>
 <div>
     <div>
-        <a href="/?page=soins_choose_add_document">Ajouter un document</a>
+        <a href="/?page=legal_choose_add_document">Ajouter un document</a>
     </div>
     <div>
         <ul>
+            <li><p>emplacement de document</p></li>
             <li><p>emplacement de document</p></li>
             <li><p>emplacement de document</p></li>
             <li><p>emplacement de document</p></li>
