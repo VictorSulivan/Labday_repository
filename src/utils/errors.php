@@ -1,3 +1,4 @@
+
 <?php
 
 function error_die($message, $url){

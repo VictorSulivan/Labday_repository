@@ -11,17 +11,10 @@ ob_start();
 <h1>Page des fichiers medicaux</h1>
 <div>
     <div>
-        <p>ajouter un fichier</p>    
+        <a href="/?page=soins_choose_add_document">Ajouter un document</a>
     </div>
     <div>
         <ul>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
             <li><p>emplacement de document</p></li>
             <li><p>emplacement de document</p></li>
             <li><p>emplacement de document</p></li>

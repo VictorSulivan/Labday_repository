@@ -15,9 +15,9 @@ ob_start();
 include_once __DIR__ . '/../partials/alert_errors.php';
 include_once __DIR__ . '/../partials/alert_success.php';
 
-if ($user->role < 200) {
-    header('Location: /?page=home');
-}
+//if ($user->role < 200) {
+    //header('Location: /?page=home');
+//}
 
 $stmh = $db->prepare('SELECT * FROM users WHERE role<=10');
 $stmh->execute();

@@ -11,7 +11,7 @@ ob_start();
 <h1>Page des fichiers d'etudes</h1>
 <div>
     <div>
-        <p>ajouter un fichier</p>    
+    <a href="/?page=etudes_choose_add_document">Ajouter un document d'etudes</a>
     </div>
     <div>
         <ul>

@@ -33,16 +33,18 @@ if ($user !== false) {
             <h3 class="title3home">Listes de documents</h3>
             <div class="blockn12">
             <div class="blockn8">
-                <p>administrations</p>
+                <a href="/?page=admin_file">administratifs</a>
             </div>
             <div class="blockn9">
-                <p>soins</p>
+                <a href="/?page=soins_file">soins</a>
+            </div>
             </div>
 
             </div>
             <div class="blockn13">
             <div class="blockn10">
-                <p>etudes</p>
+            <a href="/?page=etudes_file">etudes</a>
+            </div>
             </div>
             <div class="blockn11">
                 <p>listes utilisateur</p>
@@ -51,7 +53,8 @@ if ($user !== false) {
         </div>
     </div>
     <div class="blockn3">
-        <p>infos</p>
+        <a href="/?page=info">info</a>
+    </div>
     </div>
 </div>
 

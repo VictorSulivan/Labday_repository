@@ -1,5 +1,5 @@
-    <!--Différents Moyens de contact pour téhoriquement nous contacter-->
-    <div class="flex-parentIndex-contact">
+ <!--Différents Moyens de contact pour téhoriquement nous contacter-->
+ <div class="flex-parentIndex-contact">
         <!--Formulaire d'envoye de message de la page de contact-->
         <form action="" method="post" align="center" class="formulaire-contact"> 
             <label for="Email"></label>
@@ -25,5 +25,3 @@
             <p align="center"></p>
         </div>
     </div>
-
-    

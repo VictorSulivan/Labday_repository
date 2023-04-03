@@ -7,15 +7,19 @@ $config['db'] = [
     'user' => 'root',
     'pass' => 'root',
     'port' => 3306
-    
+
 ];
 
-$config['roles'] = [
+$config['role'] = [
     0 => "Utilisateur Banni",
     1 => "Utilisateur Non-Vérifié",
     10 => "Utilisateur Vérifié",
-    200 => "Manager",
+    20 => "Soins",
+    30 => "Etudes",
+    40 => "judicaire",
+    200 => "Administrations",
     1000 => "Admin"
+
 ];
 
 $config['status'] = [
