@@ -13,14 +13,9 @@ ob_start();
     <div>
         <p>ajouter un fichier</p>    
     </div>
+
     <div>
         <ul>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
-            <li><p>emplacement de document</p></li>
             <li><p>emplacement de document</p></li>
             <li><p>emplacement de document</p></li>
             <li><p>emplacement de document</p></li>
@@ -31,7 +26,10 @@ ob_start();
         </ul>
     </div>
 </div>
+
+
 <?php
 
-
 $page_content = ob_get_clean();
+
+?>

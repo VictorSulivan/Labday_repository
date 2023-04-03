@@ -18,7 +18,7 @@ require_once __DIR__ . '/utils/errors.php';
 } */
 
 //pages existantes sur notre site internet
-$pages = ['home', 'login', 'signup','account_verification','operations/conversion','profile','info','contact','admin_file','etudes_file','soins_file','settings','description','procedures','aide'];
+$pages = ['home', 'login', 'signup','account_verification','operations/conversion','profile','info','contact','admin_file','etudes_file','soins_file','settings','description','procedures','aide', 'logout'];
 
 //init variables vides pour le template
 $head_metas = "";

@@ -1,135 +1,88 @@
-header{
-    background-color: rgba(134, 134, 134, 0.31);
-    padding-top: 3px;
-    padding-bottom: 9px;
-    font-size: 15px;
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #19302E;
+  position: relative;
 }
 
-.divheaderone{
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
+.nav > .nav-header {
+  display: inline;
 }
 
-#divheadertwo{
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
     display: inline-block;
-    vertical-align: top;
-}
-
-.titlenumerie{
-    font-size: 50px;
-    padding-left: 33%;
-    padding-right: 10%;
-}
-
-:root{
-    --hauteur-menu: 60px;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
-nav{
-    width: 100%;
-    position: sticky;
-    top: O;
-}
-
-nav > ul{
-    display: flex;
-    text-align: center;
-    box-shadow: 0px 1px 2px 1px rgba (0, 0, 0, 0.3);
-    height: var(--hauteur-menu);
-}
-
-nav ul{
-    list-style-type: none;
-}
-
-nav > ul > li{
-    position: relative;
-    height: 100%;
-    flex: 1;
-}
-
-nav > ul > li > a{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-li a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
-
-.menu-deroulant > a:after{
-    content: "-";
-    margin-left: 7px;
-    display: inline-block; 
-}
-
-.sous-menu{
-    margin-top: var(--hauteur-menu);
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
     width: 100%;
-    text-align: left;
-    background-color: rgba(134, 134, 134, 0.31);
-    border-radius: 7px;
-    overflow: hidden;
-    max-height: 0;
-}
-
-.sous-menu > li > a{
-    height: 40px;
-    padding-left: 20px;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
     width: 100%;
-    align-items: center;
-    display: flex;
-}
-
-nav > ul > li:hover > a{
-    color: rgb(105, 105, 105);
-}
-
-.sous-menu > li:hover{
-    box-shadow: 0 0 5px #ddb4ff,
-                0 0 10px #ddb4ff,
-                0 0 25px #ddb4ff,
-                0 0 40px #ddb4ff,
-}
-
-
-
-@keyframes rotationFleche{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(90deg);
-    }
-}
-
-.menu-deroulant:hover > a:after{
-    animation: rotationFleche 0.2s linear forwards;
-}
-
-@keyframes apparitionSousMenu{
-    0%{
-        box-shadow: 0px 3px 3px 1px rgba(50, 50, 51, 50);
-        border-top: 3px solid rgba(100, 100, 100, 50)
-    }
-    30%{
-        box-shadow: 0px 3px 3px 1px rgba(150, 45, 51, 50);
-    }
-    100%{
-        max-height: 50em;
-        border-top: 0px 3px 3px 1px rgba(150, 45, 51, 50);
-    }
-}
-
-.menu-deroulant:hover > .sous-menu{
-    animation: apparitionSousMenu 1s forwards;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
 }
