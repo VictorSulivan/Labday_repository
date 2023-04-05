@@ -6,7 +6,7 @@ $config['db'] = [
     'name' => 'projet_labday',
     'user' => 'root',
     'pass' => 'root',
-    'port' => 3306
+    'port' => 3308
 
 ];
 

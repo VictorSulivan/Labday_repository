@@ -30,7 +30,7 @@ ob_start();
                     $legal_form_content = htmlspecialchars($_POST['legal_form_content']);
                     $id_user=$_SESSION['user_id'];
                     $type_of_file = "formulaire";
-                    $date_insert_file = "dfg";
+                    $date_insert_file = "tfg";
                     $nom_legal_formlength = strlen($nom_legal_form);
                     
                     if($nom_legal_formlength<=255){

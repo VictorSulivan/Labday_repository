@@ -9,72 +9,64 @@ ob_start();
 
 <h1>Page d'ajout d'un fichier exterieur</h1>
 <div>
-    <form method="POST" enctype="multipart/form-data">
-        <div class="user-box">
-            <input type="text" id="nom_admin_file" name="nom_admin_file" >
-            <label for="nom_admin_file">Titre du document</label>
-        </div>
-        <div class="user-box">
-            <input type="file" id="admin_file_content" name="admin_file_content" >
-            <label for="admin_file_content">Contenus</label>
-        </div>
-        <input type="submit" name="form_add_file_admin" value="upload_add_file_admin"/>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+    <label for="nom_fichier">Nom du fichier :</label>
+		<input type="text" name="nom_fichier" id="nom_fichier"><br><br>
+		
+		<label for="fichier">Fichier :</label>
+		<input type="file" name="fichier" id="fichier"><br><br>
+		
+		<input type="submit" name="submit" value="Uploader">
     </form>
-    <?php
-            if(isset($_POST['form_add_file_admin'])){
-                if(!empty($_POST['nom_admin_file'])AND !empty($_POST['admin_file_content']) ){
-                    $id_user=$_SESSION['user_id'];
-                    $type_of_file = "formulaire";
-                    $nom_admin_form=$_POST['nom_admin_file'];
-                    $nom_admin_formlength = strlen($nom_admin_form);
-                    
-                    if($nom_admin_formlength<=255){
-                        // Vérifier que le formulaire a été soumis
-                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                            // Vérifier que le fichier a été téléchargé sans erreur
-                            if ($_FILES["admin_file_content"]["error"] == UPLOAD_ERR_OK) {
-                                // Vérifier le type de fichier
-                                $fileType = $_FILES["admin_file_content"]["type"];
-                                if ($fileType == "image/jpeg" || $fileType == "image/png") {
-                                    // Récupérer le contenu du fichier
-                                    $fileContent = file_get_contents($_FILES["admin_file_content"]["tmp_name"]);
-                                    
-                                    // Préparer la requête SQL
-                                    $stmt = $db->prepare("INSERT INTO administration_file (id_user, name_file, type_of_file, file_data, date_insert_administration_file) VALUES (?, ?, ?, ?, NOW())");
-                                    // Binder les paramètres
-                                    $stmt->bind_param("issb", $id_user, $_POST['nom_admin_file'], $type_of_file, $fileContent);
-                                    // Exécuter la requête
-                                    $stmt->execute();
-                                    // Fermer la connexion à la base de données
-                                    $stmt->close();
-                                    // Afficher un message de confirmation
-                                    $erreur ="Le fichier a été ajouté à la base de données.";
-                                    // Redirige l'utilisateur vers la page d'affichage des admin file
-                                    //header('Location: /?page=admin_file');
-                                    //exit; // Assure que le script s'arrête ici pour éviter toute exécution supplémentaire
-                                } else {
-                                    $erreur= "Le fichier doit être au format JPEG ou PNG.";
-                                }
-                            }else {
-                                $erreur ="Une erreur s'est produite lors du téléchargement du fichier.";
-                            }
-                        }else{
-                            $erreur="le formulaire n'a pas ete soumis";
-                        }
-                    }else{
-                        $erreur= "erreur nom trop long moins de 255 caractere please";
-                    }
-                }else{
-                    $erreur ="tout les champs doivent etre complétés";
-                }
-                }
-            
-            
-            if(isset($erreur)){
-                echo $erreur;
-            }
-?>
-</div>
 <?php
-//$page_content = ob_get_clean();
+    // Connexion à la base de données
+    $host_serveur = 'localhost';
+    $dbname_serveur = 'file_categories';
+    $username_serveur = 'victor';
+    $password_serveur = '';
+    try {
+        $pdo = new PDO("mysql:host=$host_serveur;dbname=$dbname_serveur;charset=utf8;port=3308',$username_serveur, $password_serveur");
+        // Configuration de PDO pour afficher les erreurs SQL
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch(PDOException $e) {
+        echo "Erreur de connexion à la base de données : " . $e->getMessage();
+    }
+
+    // Vérification que le formulaire a bien été soumis
+    if(isset($_POST["submit"])) {
+        // Récupère les informations du fichier uploadé
+    $nom_fichier = htmlspecialchars($_POST['nom_fichier']);
+    $taille_fichier = $_FILES['fichier']['size'];
+    $type_fichier = $_FILES['fichier']['type'];
+    $contenu_fichier = file_get_contents($_FILES['fichier']['tmp_name']);
+    $id_utilisateur = $_SESSION['user_id'];
+    $date_upload = date('Y-m-d H:i:s');
+
+    // Prépare la requête SQL pour insérer le fichier dans la table fichiers
+    $sql = "INSERT INTO fichiers_administratifs (id_user, nom_fichier, type_fichier, taille_fichier, fichier, date_upload)
+            VALUES (:id_utilisateur, :nom_fichier, :type_fichier, :taille_fichier, :contenu_fichier, :date_upload)";
+
+    // Prépare la requête pour l'exécution
+    $stmt = $pdo->prepare($sql);
+
+    // Bind des valeurs
+    $stmt->bindParam(':id_utilisateur', $id_utilisateur);
+    $stmt->bindParam(':nom_fichier', $nom_fichier);
+    $stmt->bindParam(':taille_fichier', $taille_fichier);
+    $stmt->bindParam(':type_fichier', $type_fichier);
+    $stmt->bindParam(':contenu_fichier', $contenu_fichier, PDO::PARAM_LOB);
+    $stmt->bindParam(':date_upload', $date_upload);
+
+   
+    // Exécution de la requête SQL
+    if ($stmt->execute()) {
+        echo "Fichier uploadé avec succès !";
+    } else {
+        echo "Une erreur est survenue.";
+    }
+    }
+    ?>
+    </div>
+    <?php
+    //$page_content = ob_get_clean();
 
