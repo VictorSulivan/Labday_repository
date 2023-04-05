@@ -60,7 +60,7 @@
 }
 
 .button-profile {
-  cursor: pointer;
+    cursor: pointer;
     font-weight: bold;
     line-height: 19px;
     background: #5850eb;

@@ -3,16 +3,22 @@
 require_once __DIR__ . '/../../init.php';
 
 $page_title = "administratif file";
+$head_metas = "<link rel=stylesheet href=assets/CSS/admin_file.css>";
+$page_scripts = "<link rel=stylesheet href=assets/JS/profile.js>";
 
 ob_start();
 
 ?>
 
+
+
 <h1>Page des fichiers administratif</h1>
 <div>
-    <div>
-        <p>ajouter un fichier</p>
-    </div>
+
+
+    
+
+
 
     <?php
     // Execute the query and fetch the results
@@ -20,12 +26,10 @@ ob_start();
     $reponses = $requete->fetchAll();
     ?>
 
-    <table class="table table-striped">
+    <table class="table-responsive">
         <thead>
             <tr>
-                <th>id</th>
                 <th>Nom du fichier</th>
-                <th>type du fichier</th>
                 <th>description du fichier</th>
                 <th>date</th>
             </tr>
@@ -33,16 +37,13 @@ ob_start();
         <tbody>
             <?php foreach ($reponses as $reponse) : ?>
                 <tr>
-                    <td><?= $reponse['id_user']; ?></td>
                     <td><?= $reponse['name_file']; ?></td>
-                    <td><?= $reponse['type_of_file']; ?></td>
                     <td><?= $reponse['description_file']; ?></td>
                     <td><?= $reponse['date_insert_file']; ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
-
 
 
     <?php

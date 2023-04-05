@@ -7,18 +7,8 @@ require_once __DIR__ . '/db.php';
 //fonctions utilitaires
 require_once __DIR__ . '/utils/errors.php';
 
-/* if ($roleadmin['role'] == 1000) {
-    $pages = ['login', 'espaceClient', 'espaceAdmin', 'validationUsers', 'clientListe', 'accueil', 'mon_espace', 'mes_comptes', 'mes_transactions', 'mes_virements', 'utilisateurs', 'validations', 'transactions', 'espaceFondateur', 'initialisation'];
-} else if ($roleadmin['role'] == 1000 || $roleadmin['role'] == 200) {
-    $pages = ['login', 'espaceClient', 'espaceAdmin', 'validationUsers', 'clientListe', 'accueil', 'mon_espace', 'mes_comptes', 'mes_transactions', 'mes_virements', 'utilisateurs', 'validations', 'transactions'];
-} else if ($roleadmin['role'] == 1 || $roleadmin['role'] == 0) {
-    $pages = ['login', 'accueil'];
-} else if ($roleadmin['role'] == 10) {
-    $pages = ['login', 'espaceClient', 'accueil', 'mon_espace', 'mes_comptes', 'mes_transactions', 'mes_virements', 'utilisateurs', 'validations', 'transactions'];
-} */
-
 //pages existantes sur notre site internet
-$pages = ['home', 'login', 'signup','account_verification','operations/conversion','profile','info','contact','admin_file','etudes_file','soins_file','settings','description','procedures','aide', 'logout'];
+$pages = ['home', 'login', 'signup', 'account_verification', 'operations/conversion', 'profile', 'info', 'contact', 'admin_file', 'etudes_file', 'soins_file', 'settings', 'description', 'procedures', 'aide', 'logout', 'admin_add_form', 'admin_choose_add_document', 'admin_add_file', 'etudes_choose_add_document', 'etudes_add_form', 'etudes_add_file', 'soins_add_form', 'soins_choose_add_document', 'legal_file', 'legal_choose_add_document', 'legal_add_form', 'soins_add_file', 'legal_add_file'];
 
 //init variables vides pour le template
 $head_metas = "";

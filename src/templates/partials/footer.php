@@ -1,7 +1,8 @@
 <section id="footer">
     <div class="main-footer">
         <div class="logoinfo" data-aos="fade-up">
-            <h2>C'est Responsive Footer sa mere</h2>
+            <h2>C'est Responsive Footer
+            </h2>
             <p>Le Boss</p>
 
             <div class="contact-details">
