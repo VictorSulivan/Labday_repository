@@ -21,25 +21,25 @@ ob_start();
                     <a href="/?page=admin_choose_add_document">Ajouter un document</a>
                 </div>
                 <div class="groupe">
-                    <label>Votre Prénom</label>
+                    <label>Votre Nom</label>
                     <input type="text" autocomplete="off" />
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="groupe">
-                    <label>Votre adresse e-mail</label>
-                    <input type="text" autocomplete="off" />
+                    <label>Votre Email</label>
+                    <input type="mail" autocomplete="off" />
                     <i class="fas fa-envelope"></i>
                 </div>
                 <div class="groupe">
-                    <label>Votre téléphone</label>
-                    <input type="text" autocomplete="off" />
+                    <label>Date</label>
+                    <input type="date" autocomplete="off" />
                     <i class="fas fa-mobile"></i>
                 </div>
             </div>
 
             <div class="droite">
                 <div class="groupe">
-                    <label>Message</label>
+                    <label>Description</label>
                     <textarea placeholder="Saisissez ici..."></textarea>
                 </div>
             </div>

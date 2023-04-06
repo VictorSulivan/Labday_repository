@@ -12,9 +12,9 @@ ob_start();
 
 <header>
     <h1>Welcome To Numérie</h1> <br>
-    <a href="/?page=soins_file">Creé rend des vous médical</a>
-    <a href="/?page=admin_file">Grérer je sais pas quoi</a>
-    <a href="">Pas d'idée !</a>
+    <a href="/?page=soins_file">RDV médical</a>
+    <a href="/?page=admin_file">Administratif</a>
+    <a href="/?page=etudes_file">Etudes</a>
 </header>
 
 <?php

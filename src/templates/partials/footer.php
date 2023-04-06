@@ -19,9 +19,9 @@
         <div class="com " data-aos="fade-up">
             <h1>À propos</h1>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Profil</a></li>
+                <li><a href="/?page=home">Home</a></li>
+                <li><a href="/?page=login">Login</a></li>
+                <li><a href="/?page=profile">Profil</a></li>
             </ul>
         </div>
         <div class="info" data-aos="fade-up">
