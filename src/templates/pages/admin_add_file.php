@@ -7,7 +7,7 @@ ob_start();
 
 ?>
 
-<h1>Page d'ajout d'un fichier exterieur</h1>
+<h1>Page d'ajout d'un fichier administrateur</h1>
 <div>
     <form action="upload.php" method="post" enctype="multipart/form-data">
     <label for="nom_fichier">Nom du fichier :</label>
