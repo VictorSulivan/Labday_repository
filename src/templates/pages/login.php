@@ -22,7 +22,9 @@ ob_start();
                 <input type="password" id="passwordconnect" name="passwordconnect" required>
                 <label>Mot de passe</label>
             </div>
-            <input type="submit" name="loginsubmitbutton" id="loginsubmitbutton" value="Se connecter!" />
+            <button>
+                <input type="submit" name="loginsubmitbutton" id="loginsubmitbutton" value="Se connecter!" />
+            </button>
         </form>
         <?php
         if (isset($_POST['loginsubmitbutton'])) {
