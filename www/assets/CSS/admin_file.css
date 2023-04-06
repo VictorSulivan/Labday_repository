@@ -1,0 +1,17 @@
+.administratif{
+  padding-bottom: 17%;
+}
+
+.table-responsive{
+  border-collapse: collapse;
+  width: 50%;
+  margin-bottom: 20px;
+}
+.t1{
+  table-layout: fixed;
+}
+
+th, td{
+  border: 1px solid black;
+  padding: 10px;
+}

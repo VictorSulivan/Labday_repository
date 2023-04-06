@@ -1,0 +1,19 @@
+.admin_add_form{
+    padding-bottom: 20%;
+    padding-top: 10%;
+}
+
+button{
+    color: white;
+}
+
+.admin_add_form_path {
+  border: none;
+  cursor: pointer;
+  background: #3675b9;
+  padding: 18px 60px;
+  border-radius: 2px;
+  font-size: 22px;
+}
+
+a:link { text-decoration: none; }

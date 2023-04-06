@@ -1,71 +1,118 @@
-footer{
-    background-color: rgb(16, 16, 51);
-    padding-top: 3%;
-    padding-bottom: 3%;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-p{
-    flex-direction: row-reverse;
-    color: rgba(202, 197, 221);
+body{
+  font-family: 'Montserrat', sans-serif;
 }
 
-.Ltwitter,
-.Linstagram{
-  margin: 0 20px;
+.main-footer {
+  padding: 70px 0;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #19302E;
 }
 
-.barreBasse{
-    font-size: 15px;
-    display: inline-block;
-    vertical-align: top;
-    width: 20%;
-    margin: 1em 4% 1em 0;
-    padding-left: 5%;
-    padding-right: 4%;
+.main-footer ul {
+  list-style: none;
 }
 
+.main-footer h1 {
+  font-size: 22px;
+  line-height: 117%;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
 
+.main-footer h2 {
+  color: #ffffff;
+  font-weight: 500;
+}
 
+.main-footer ul li a {
+  color: #ffffffcc;
+  text-decoration:none;
+}
 
+footer {
+  background-color: #19302E;
+  border-top: 1px solid #6EB981;
+  font-size: 17px;
+  padding: 15px 5px;
+  color: #ffffff;
+  text-align: center;
+}
 
+footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
 
+.logoinfo p {
+  color: #6EB981;
+  font-size: 17px;
+  margin-top: 5px;
+}
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
+.contact-details {
+  margin-top: 20px;
+}
+
+.contact-details li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.contact-details li a {
+  text-decoration:none;
+  color: #f1f1f1;
+}
+
+.contact-details .fa {
+  color: #f1f1f1;
+  margin-right: 10px;
+}
+
+.sociallogos{
+  padding:20px 0;
+}
+
+.sociallogos .logobox a{
+  padding:0 10px;
+  text-decoration:none;
+  color:#ffffff;
+  font-size:22px;
+}
+
+.com ul li{
+  padding:5px 0;
+}
+
+@media only screen and (max-width: 749px) {
+  .main-footer {
+    padding:20px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
   }
-
-
-.Ltwitter:hover,
-.Linstagram:hover{
-  font-size: 8em;
-  color: #fff;
-  border-radius: 29px;
-  margin: 0 20px;
-  animation: animate 3s linear infinite;
-  box-shadow: 0 0 5px #03e9f4,
-                0 0 10px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 40px #03e9f4;
-}
-#twitter {
-  animation-delay: 0.3s;
-}
-#facebook {
-  animation-delay: 0.7s;
-}
-#github {
-  animation-delay: 0.1s;
-}
-
-@keyframes animate {
-  from {
-    filter: hue-rotate(0deg);
+    .info{
+      padding:20px 0;
   }
-  to {
-    filter: hue-rotate(360deg);
+}
+
+@media (max-width: 480px) {
+  .main-footer {
+    grid-template-columns: 1fr;
   }
+  .sociallogos{
+    padding:20px 0;
+  }
+  .com{
+    padding:20px 0;
+  } 
+
 }

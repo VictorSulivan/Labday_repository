@@ -1,30 +1,25 @@
-<header>
-    <nav>
-        <ul>
-            <li id="divheadertwo" class="menu-deroulant">
-                <a href="/?page=home">Menu</a>
-                <ul class="sous-menu">
-                    <li><a href="/?page=procedures">Procédures</a></li>
-                    <li><a href="/?page=admin_file">Administratif</a></li>
-                    <li><a href="/?page=soins_file">Soins</a></li>
-                    <li><a href="/?page=etudes_file">Études</a></li>
-                    <li><a href="/?page=help_page">Aides</a></li>
-                    <li><a href="/?page=info">Infos</a></li>
-                    <li><a href="/?page=description">Description</a></li>
-                    <li><a href="/?page=settings">Settings</a></li>
-                </ul>
-            </li>
+<!-- NavBar -->
 
-            <li id="divheadertwo" class="titlenumerie">Numérie</li>
-            <li id="divheadertwo"><a href="/?page=login">Login</a></li>
-            <li id="divheadertwo"><a href="/?page=signup">SignUp</a></li>
-            <li><a href="/?page=logout">Logout</a></li>
-            <li><a href="/?page=profile">Profil</a></li>
-        </ul>
+<div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+        <div class="nav-title">
+            Numérie
+        </div>
+    </div>
+    <div class="nav-btn">
+        <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
 
-
-
-        
-    </nav>
-  
-</header>
+    <div class="nav-links">
+        <a id="divheadertwo"><a href="/?page=home">Home</a>
+        <a id="divheadertwo"><a href="/?page=login">Login</a>
+        <a id="divheadertwo"><a href="/?page=signup">SignUp</a>
+        <a id="divheadertwo"><a href="/?page=logout">Logout</a>
+        <a id="divheadertwo"><a href="/?page=profile">Profil</a>
+    </div>
+</div>
